@@ -8,9 +8,9 @@ This tool has been developed by DvvSalom3 and Fellcrack. This was more like for 
 / Happy hacking. Hack da freakin' world my friend \
 \ Ain't be out of OpSec.  Fuck the NSA            /
  -------------------------------------------------
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\\
-                 ||----w |
-                 ||     ||
+  \   ^__^ 
+   \  (oo)\_______
+      (__)\       )\/\\
+           ||----w |
+           ||     ||
 :D
