@@ -1,20 +1,24 @@
-"""
-Decodificador de retos con inverso modular (ej. CTF tipo picoCTF)
-
- _________________________________________
-/ Este codigo anteriormente lo sabia Dios \
-| y nosotros dos.  Ahora solo lo sabe     |
-\ Dios...                                /
- ----------------------------------------
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\\
-                 ||----w |
-                 ||     ||
-                 
-Mejorado con manejo de errores, funciones y mensajes de depuración.
-"""
-
+#ain't get doxxed by the NSA, do NOT trust the DOT companies :D
+#FREEDOM IS FOR ALL OF US!
+#Decoder for Inverse Modular Challenges - picoCTF
+#By Dvvsalom3 and Fellcrack
+#Feel free to use and modify it as you wish :D
+#If you do some interesting modification, please share it with us or do a github pull request :D
+#If u find any bug, please report it to us :D
+#We're open to suggestions :D
+#  __________________________________________
+# / This code was previously known and       \
+# | understood by God and the two of us. Now |
+# \ only God knows and understands it.       /
+#  ------------------------------------------
+    #     \   ^__^ 
+   #       \  (oo)\_______
+  #           (__)\       )\/\\
+ #                ||----w |
+#                 ||     ||
+#|=====================================================================|                 
+#|  Enhanced with error handling, debugging functions, and messages.   |
+#|=====================================================================|
 def obtener_residuos(lista, mod):
     return [x % mod for x in lista]
 
@@ -36,41 +40,46 @@ def decodificar(residuos, mod, alfabeto):
     return flag, detalles
 
 if __name__ == "__main__":
-    entrada_lista = input("Ingrese la lista de números separados por comas: ")
+    entrada_lista = input("Put the list of numbers to decode (Separated by commas): ")
     lista_a = [int(x.strip()) for x in entrada_lista.split(",")]
-    modulo = int(input("Ingrese el módulo: "))
+    modulo = int(input("Put the module: "))
 
-    #==========================|
-    #  TABLA DE CARACTERES     |
-    #==========================|
+    #|==========================|
+    #|     CHARACTERS TABLE     |
+    #|==========================|
 
     default_alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
     alfabeto = input(
-        f"Alfabeto (ENTER para usar el estándar picoCTF): "
+        f"alfabet (ENTER to use the standart by picoCTF): "
     ).strip() or default_alfabeto
 
     residuos = obtener_residuos(lista_a, modulo)
     flag, detalles = decodificar(residuos, modulo, alfabeto)
 
-    print("\n--- Residuos calculados ---")
+    print("\n--- calculated waste ---")
     print(residuos)
 
-    print("\n--- Decodificación paso a paso ---")
+    print("\n--- step-by-step decoding ---")
     for i, r, inv, ch in detalles:
         print(f"[{i:02}] residuo={r:2}  inverso={inv}  caracter='{ch}'")
 
     #imprimimos la flag final
-    print("\n--- FLAG RESULTANTE ---")
+    print("\n--- SOLVED FLAG ---")
     print("picoCTF{"+ flag +"}")
 
-#==================================|
-#  Codigo By Dvvsalom3 y Fellcrack |
-#==================================|
-#           14/09/2025             |
-#==================================|
+#Huh? Some of reverse engineering? :D
+#Well, this is a simple script for decoding Inverse Modular Challenges from picoCTF
+#and, to your knowledge, this ain't a challenge, btw, go to do something more productive :D
+#This script was made in python3, so, please, run it with python3
 
-#DISFRUTENLO :D
+#|==================================|
+#| Script By Dvvsalom3 y Fellcrack  |
+#|==================================|
+#|          14/09/2025              |
+#|==================================|
+
+#Enjoy it so much :D
 #HACK THE PLANET!
 #Happy hacking :D
-#Si te gusta el codigo damos credito porfavor :D
-#Estaremos desarrollando un tookit de herramientas para CTFs
+#If you liked the code, please give us some of credits :D
+#We're gonna to make a toolkit for ctf :D (More like for cryptography)
